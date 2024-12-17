@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алгоритм Евклида. Нахождение НОД</title>
+    <style>
+        table,
+        p {
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Лабораторная работа номер 2. Циклические алгоритмы</h1>
+    <p><b>Цель работы:</b> научиться разрабатывать скрипты на языке JavaScript, реализующие циклические алгоритмы
+        обработки данных с использованием циклов for, while, do...while.</p>
+    <h2>Задача №1</h2>
+    <h3>Формулировка условия:</h3>
+    <p>Алгоритм Евклида нахождения наибольшего общего делителя (НОД) неотрицательных целых чисел основан
+        на следующих свойствах этой величины. Пусть m и n — одновременно не равные нулю целые неотрицательные числа
+        и пусть m > или = n. Тогда, если n=0, то НОД(n,m) = m, а если n не равен 0, то для чисел n, m и r где r —
+        остаток от
+        деления m на n, выполняется равенство НОД(n,m) = НОД(n,r). Например, НОД(15, 6) = НОД(6, 3) = НОД (3. 0) =
+        3. Даны натуральные числа n, m. Используя алгоритм Евклида, найти их наибольший общий делитель.</p>
+
+    <div>
+        <label for="num1">Число 1:</label>
+        <input type="number" id="num1" placeholder="Введите первое число" required>
+    </div>
+    <div>
+        <label for="num2">Число 2:</label>
+        <input type="number" id="num2" placeholder="Введите второе число" required>
+    </div>
+    <button onclick="findGCD()">Вычислить НОД</button>
+    <button onclick="openCode()">Посмотреть код</button>
+
+    <h3>Результат:</h3>
+    <p id="output"></p>
+
+    <div class="test-container">
+        <h2>Тесты</h2>
+
+        <div>
+            <h3>Тест 1:</h3>
+            <p>Числа: 56, 98</p>
+            <p>Ожидаемый результат: НОД: 14</p>
+            <button onclick="runTest(56, 98)">Запустить тест 1</button>
+        </div>
+
+        <div>
+            <h3>Тест 2:</h3>
+            <p>Числа: 45, 120</p>
+            <p>Ожидаемый результат: НОД: 15</p>
+            <button onclick="runTest(45, 120)">Запустить тест 2</button>
+        </div>
+
+        <div>
+            <h3>Тест 3:</h3>
+            <p>Числа: 101, 103</p>
+            <p>Ожидаемый результат: НОД: 1</p>
+            <button onclick="runTest(101, 103)">Запустить тест 3</button>
+        </div>
+    </div>
+    <script src="script_2_1.js"></script>
+
+</body>
+
+</html>
