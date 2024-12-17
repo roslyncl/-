@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вычисление матрицы [cij]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Лабораторная работа 5. Массивы с числовыми индексами </h1>
+    <p><b>Цель работы:</b>научиться разрабатывать скрипты на языке JavaScript, реализующие алгоритмы обработки
+        одномерных и многомерных числовых массивов.</p>
+    <h2>Задача №2</h2>
+    <h3>Формулировка условия:</h3>
+    <p>Даны натуральное число n и действительные числа а1, a2, ... an, b1, b2, ... bn. Получить действительную матрицу [cij] ‚ для которой cij = (ai + bj) / sqrt(|ai| + |bj|), где i,j= 1,2,...,n.</p>
+
+    <h2>Ввод данных:</h2>
+    <label for="n">Введите n:</label>
+    <input type="number" id="n" min="1" step="1" required>
+    <br>
+    <label for="a">Введите числа a1, a2, ..., an (через запятую):</label>
+    <input type="text" id="a" required>
+    <br>
+    <label for="b">Введите числа b1, b2, ..., bn (через запятую):</label>
+    <input type="text" id="b" required>
+    <br>
+    <button onclick="calculateMatrix()">Вычислить матрицу</button>
+    <button onclick="openCode()">Посмотреть код</button>
+    <h2>Результат:</h2>
+    <div id="result"></div>
+
+    <div class="test-container">
+        <h2>Тесты</h2>
+
+        <div>
+            <h3>Тест 1:</h3>
+            <p>Входные данные: n=2, a=[1, 2], b=[3, 4]</p>
+            <p>Ожидаемый результат: Матрица [cij]</p>
+            <button onclick="runTest(2, '1,2', '3,4')">Запустить тест 1</button>
+        </div>
+
+        <div>
+            <h3>Тест 2:</h3>
+            <p>Входные данные: n=3, a=[0, 1, 2], b=[1, 2, 3]</p>
+            <p>Ожидаемый результат: Матрица [cij]</p>
+            <button onclick="runTest(3, '0,1,2', '1,2,3')">Запустить тест 2</button>
+        </div>
+
+        <div>
+            <h3>Тест 3:</h3>
+            <p>Входные данные: n=1, a=[1], b=[1]</p>
+            <p>Ожидаемый результат: Матрица [cij]</p>
+            <button onclick="runTest(1, '1', '1')">Запустить тест 3</button>
+        </div>
+    </div>
+
+    <script src="script_5_2.js"></script>
+</body>
+
+</html>
