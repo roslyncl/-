@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка массива</title>
+    <style>
+        table,
+        p {
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            text-align: center;
+            font-size: 18px;
+            padding: 8px;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Лабораторная работа 5. Массивы с числовыми индексами </h1>
+    <p><b>Цель работы:</b>научиться разрабатывать скрипты на языке JavaScript, реализующие алгоритмы обработки
+        одномерных и многомерных числовых массивов.</p>
+    <h2>Задача №1</h2>
+    <h3>Формулировка условия:</h3>
+    <p>Дан одномерный числовой массив. Если он упорядочен по убыванию, то вывести его на экран в обратном порядка; в
+        противном случае вывести на экран номер первого элемента, нарушающего упорядоченность.</p>
+
+    <div>
+        <label for="arrayInput">Введите элементы массива через запятую:</label>
+        <input type="text" id="arrayInput" placeholder="Например: 5,4,3,2,1">
+    </div>
+    <button onclick="checkArray()">Проверить и вывести</button>
+    <button onclick="openCode()">Посмотреть код</button>
+    <h3>Результат:</h3>
+    <table>
+        <tr>
+            <th>Параметр</th>
+            <th>Значение</th>
+        </tr>
+        <tr>
+            <td>Результат</td>
+            <td id="result">-</td>
+        </tr>
+    </table>
+    <div class="test-container">
+        <h2>Тесты</h2>
+
+        <div>
+            <h3>Тест 1:</h3>
+            <p>Входные данные: 5,4,3,2,1</p>
+            <p>Ожидаемый результат: 1, 2, 3, 4, 5</p>
+            <button onclick="runTest('5,4,3,2,1')">Запустить тест 1</button>
+        </div>
+
+        <div>
+            <h3>Тест 2:</h3>
+            <p>Входные данные: 5,4,3,2,3</p>
+            <p>Ожидаемый результат: Нарушение на индексе: 3</p>
+            <button onclick="runTest('5,4,3,2,3')">Запустить тест 2</button>
+        </div>
+
+        <div>
+            <h3>Тест 3:</h3>
+            <p>Входные данные: 10,9,8,7,6</p>
+            <p>Ожидаемый результат: 6, 7, 8, 9, 10</p>
+            <button onclick="runTest('10,9,8,7,6')">Запустить тест 3</button>
+        </div>
+    </div>
+
+    <script src="script_5_1.js"></script>
+</body>
+
+</html>
