@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск однофамильцев</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .test-result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        .test-result.success {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+
+        .test-result.failure {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Лабораторная работа. Поиск однофамильцев</h1>
+    <p><b>Задача:</b> Дан ассоциативный массив, содержащий сведения об учениках школы: имя и фамилия ученика, а также название класса (года обучения и буквы). Выяснить, имеются ли в школе однофамильцы.</p>
+
+    <h2>Ввод данных:</h2>
+    <label for="studentsInput">Введите данные об учениках в формате JSON:</label>
+    <textarea id="studentsInput" rows="10" cols="50" placeholder='[{"name": "Иван", "surname": "Иванов", "class": "5А"}, {"name": "Петр", "surname": "Петров", "class": "6Б"}]'></textarea>
+    <br>
+    <button onclick="checkForSameSurnames()">Проверить однофамильцев</button>
+
+    <h2>Результат:</h2>
+    <div id="result"></div>
+
+    <h2>Тесты:</h2>
+    <button onclick="runTest(1)">Тест 1: Однофамильцы есть</button>
+    <button onclick="runTest(2)">Тест 2: Однофамильцев нет</button>
+    <button onclick="runTest(3)">Тест 3: Пустой массив</button>
+
+    <script src="script_6_1.js"></script>
+</body>
+
+</html>
