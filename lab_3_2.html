@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нахождение количества цифр</title>
+    <style>
+        table,
+        p {
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            text-align: center;
+            font-size: 18px;
+            padding: 8px;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Лабораторная работа 3. Функции. Рекурсивные функции </h1>
+    <p><b>Цель работы:</b>научиться разрабатывать скрипты на языке JavaScript с использованием функций и рекурсивных
+        функций.</p>
+    <h2>Задача №2</h2>
+    <h3>Формулировка условия:</h3>
+    <p>Дано натуральное число n; найти количество его цифр. Использовать программу, включающую рекурсивную функцию.</p>
+
+    <div>
+        <label for="num">Введите число (n):</label>
+        <input type="number" id="num" placeholder="Введите число" required>
+    </div>
+    <button onclick="findDigitCount()">Вычислить количество цифр</button>
+    <button onclick="openCode()">Посмотреть код</button>
+    <h3>Результат:</h3>
+    <table>
+        <tr>
+            <th>Параметр</th>
+            <th>Значение</th>
+        </tr>
+        <tr>
+            <td>Количество цифр</td>
+            <td id="result">-</td>
+        </tr>
+    </table>
+    <div class="test-container">
+        <h2>Тесты</h2>
+
+        <div>
+            <h3>Тест 1:</h3>
+            <p>Входные данные: Число 1 = 9</p>
+            <p>Ожидаемый результат: 1</p>
+            <button onclick="runTest(9)">Запустить тест 1</button>
+        </div>
+
+        <div>
+            <h3>Тест 2:</h3>
+            <p>Входные данные: Число 2 = 12345</p>
+            <p>Ожидаемый результат: 5</p>
+            <button onclick="runTest(12345)">Запустить тест 2</button>
+        </div>
+
+        <div>
+            <h3>Тест 3:</h3>
+            <p>Входные данные: Число 3 = 987654321</p>
+            <p>Ожидаемый результат: 9</p>
+            <button onclick="runTest(987654321)">Запустить тест 3</button>
+        </div>
+    </div>
+
+    <script src="script_3_2.js"></script>
+
+</body>
+
+</html>
