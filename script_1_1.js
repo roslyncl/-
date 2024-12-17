@@ -16,5 +16,5 @@ function runTest(catet1, catet2) {
     calculate();
 }
 function openCode(){
-    window.open("https://github.com/roslyncl/-/blob/main/inde.html", "_blank");
+    window.open("https://github.com/roslyncl/-/blob/main/lab_1_1.html", "_blank");
 }
