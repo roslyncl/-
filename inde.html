@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 1. Прямоугольный треугольник</title>
+    <style>
+        table,
+        p {
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Лабораторная работа номер 1. Линейные алгоритмы. Ветвление</h1>
+    <p><b>Цель работы:</b> научиться разрабатывать скрипты на языке JavaScript, реализующие линейные и развлетвленные
+        алгоритмы обработки.</p>
+    <h2>Задача №1</h2>
+    <h3>Формулировка условия:</h3>
+    <p>Даны катеты прямоугольного треугольника. Найти его гипотенузу и площадь.</p>
+
+    <div>
+        <label for="catet1">Катет 1 (a):</label>
+        <input type="number" id="catet1" placeholder="Введите катет 1" required>
+    </div>
+    <div>
+        <label for="catet2">Катет 2 (b):</label>
+        <input type="number" id="catet2" placeholder="Введите катет 2" required>
+    </div>
+    <button onclick="calculate()">Вычислить</button>
+    <button onclick="openCode()">Посмотреть код</button>
+
+    <h3>Результаты:</h3>
+    <table id="results_table">
+        <tr>
+            <th>Параметр</th>
+            <th>Значение</th>
+        </tr>
+        <tr>
+            <td>Гипотенуза (c)</td>
+            <td id="hypotenuse">-</td>
+        </tr>
+        <tr>
+            <td>Площадь (S)</td>
+            <td id="area">-</td>
+        </tr>
+    </table>
+    <div class="test-container">
+        <h2>Тесты</h2>
+
+        <div>
+            <h3>Тест 1:</h3>
+            <p>Катеты: 3 и 4</p>
+            <p>Ожидаемый результат: Гипотенуза = 5, Площадь = 6</p>
+            <button onclick="runTest(3, 4)">Запустить тест 1</button>
+        </div>
+
+        <div>
+            <h3>Тест 2:</h3>
+            <p>Катеты: 6 и 8</p>
+            <p>Ожидаемый результат: Гипотенуза = 10, Площадь = 24</p>
+            <button onclick="runTest(6, 8)">Запустить тест 2</button>
+        </div>
+
+        <div>calculate
+            <h3>Тест 3:</h3>
+            <p>Катеты: 5 и 12</p>
+            <p>Ожидаемый результат: Гипотенуза = 13, Площадь = 30</p>
+            <button onclick="runTest(5, 12)">Запустить тест 3</button>
+        </div>
+    </div>
+    <script src="script_1_1.js"></script>
+
+</body>
+
+</html>
