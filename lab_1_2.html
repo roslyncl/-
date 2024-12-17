@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 2. Проверка чисел на принадлежность интервалу</title>
+    <style>
+        table,
+        p {
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Лабораторная работа номер 1. Линейные алгоритмы. Ветвление</h1>
+    <p><b>Цель работы:</b> научиться разрабатывать скрипты на языке JavaScript, реализующие линейные и развлетвленные
+        алгоритмы обработки.</p>
+    <h2>Задача №2</h2>
+    <h3>Формулировка условия:</h3>
+    <p>Даны три действительных числа. Необходимо выбрать те, которые принадлежат интервалу (1, 3).</p>
+
+    <div>
+        <label for="num1">Число 1:</label>
+        <input type="number" id="num1" step="any" placeholder="Введите первое число" required>
+    </div>
+    <div>
+        <label for="num2">Число 2:</label>
+        <input type="number" id="num2" step="any" placeholder="Введите второе число" required>
+    </div>
+    <div>
+        <label for="num3">Число 3:</label>
+        <input type="number" id="num3" step="any" placeholder="Введите третье число" required>
+    </div>
+    <button onclick="checkInterval()">Проверить числа</button>
+    <button onclick="openCode()">Посмотреть код</button>
+
+    <h3>Результаты:</h3>
+    <p id="output"></p>
+
+    <div class="test-container">
+        <h2>Тесты</h2>
+
+        <div>
+            <h3>Тест 1:</h3>
+            <p>Числа: 1, 2, 3</p>
+            <p>Ожидаемый результат: Число, принадлежащее интервалу (1, 3): 2</p>
+            <button onclick="runTest(1, 2, 3)">Запустить тест 1</button>
+        </div>
+
+        <div>
+            <h3>Тест 2:</h3>
+            <p>Числа: 1, 2.5, 4</p>
+            <p>Ожидаемый результат: Число, принадлежащее интервалу (1, 3): 2.5</p>
+            <button onclick="runTest(1, 2.5, 4)">Запустить тест 2</button>
+        </div>
+
+        <div>
+            <h3>Тест 3:</h3>
+            <p>Числа: 0, 1.8, 5</p>
+            <p>Ожидаемый результат: Число, принадлежащее интервалу (1, 3): 1.8</p>
+            <button onclick="runTest(0, 1.8, 5)">Запустить тест 3</button>
+        </div>
+    </div>
+    <script src="script_1_2.js"></script>
+
+</body>
+
+</html>
