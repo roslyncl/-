@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вычисление значения q</title>
+    <style>
+        table,
+        p {
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Лабораторная работа номер 2. Циклические алгоритмы</h1>
+    <p><b>Цель работы:</b> научиться разрабатывать скрипты на языке JavaScript, реализующие циклические алгоритмы
+        обработки данных с использованием циклов for, while, do...while.</p>
+    <h2>Задача №2</h2>
+    <h3>Формулировка задания:</h3>
+    <p>Вычислить значения величины q = e^(-k/2) * (k - 3 * sqrt(k) + 1.2), где k = 0.1, 0.2, ... Расчет производить до
+        тех пор, пока q не станет меньше 0.0001.</p>
+
+    <button onclick="calculateQ()">Вычислить</button>
+    <button onclick="openCode()">Посмотреть код</button>
+
+    <h3>Результат:</h3>
+    <p id="output"></p>
+
+    <script src="script_2_2.js"></script>
+</body>
+
+</html>
