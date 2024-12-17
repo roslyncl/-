@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подсчет символов</title>
+    <style>
+        table,
+        p {
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            text-align: center;
+            font-size: 18px;
+            padding: 8px;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .test-container {
+            margin-top: 40px;
+        }
+
+        .test-container h3 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Лабораторная работа 4. Алгоритмы работы со строками </h1>
+    <p><b>Цель работы:</b>научиться разрабатывать скрипты на языке JavaScript, реализующие алгоритмы обработки строковых
+        данных с использованием свойств и методов объекта String.</p>
+    <h2>Задача №1</h2>
+    <h3>Формулировка условия:</h3>
+    <p>Даны две строки s1 и s2. Посчитать, сколько раз в строке s2, встречается первый символ строки s1.</p>
+
+
+    <div>
+        <label for="s1">Введите строку s1:</label>
+        <input type="text" id="s1" placeholder="Введите строку s1" required>
+    </div>
+    <div>
+        <label for="s2">Введите строку s2:</label>
+        <input type="text" id="s2" placeholder="Введите строку s2" required>
+    </div>
+    <button onclick="countOccurrences()">Вычислить количество вхождений</button>
+    <button onclick="openCode()">Посмотреть код</button>
+    <h3>Результат:</h3>
+    <table>
+        <tr>
+            <th>Параметр</th>
+            <th>Значение</th>
+        </tr>
+        <tr>
+            <td>Количество вхождений</td>
+            <td id="result">-</td>
+        </tr>
+    </table>
+
+    <!-- Контейнер для тестов -->
+    <div class="test-container">
+        <h2>Тесты</h2>
+
+        <div>
+            <h3>Тест 1:</h3>
+            <p>Входные данные: s1 = "apple", s2 = "banana apple apple"</p>
+            <p>Ожидаемый результат: 2</p>
+            <button onclick="runTest('9evffh', 'banana9apple9  apple')">Запустить тест 1</button>
+        </div>
+
+        <div>
+            <h3>Тест 2:</h3>
+            <p>Входные данные: s1 = "a", s2 = "apple"</p>
+            <p>Ожидаемый результат: 0</p>
+            <button onclick="runTest('x', 'apple')">Запустить тест 2</button>
+        </div>
+
+        <div>
+            <h3>Тест 3:</h3>
+            <p>Входные данные: s1 = "x", s2 = "hello world"</p>
+            <p>Ожидаемый результат: 1</p>
+            <button onclick="runTest('!', 'hello world!')">Запустить тест 3</button>
+        </div>
+    </div>
+
+    <script src="script_4_1.js"></script>
+</body>
+
+</html>
